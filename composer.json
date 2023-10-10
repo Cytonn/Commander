@@ -8,6 +8,7 @@
             "email": "jeffrey@laracasts.com"
         }
     ],
+
     "require": {
         "php": "^7.2",
         "illuminate/filesystem": "~5.0",
