@@ -2,7 +2,7 @@
 
 use Laracasts\Commander\Events\Contracts\Dispatcher as DispatcherInterface;
 use Illuminate\Events\Dispatcher;
-use Illuminate\Log\Writer;
+use Illuminate\Log\Logger as Writer;
 
 class EventDispatcher implements DispatcherInterface {
 
@@ -43,7 +43,7 @@ class EventDispatcher implements DispatcherInterface {
         {
             $eventName = $this->getEventName($event);
 
-            $this->event->fire($eventName, $event);
+            $this->event->dispatch($eventName, $event);
 
             $this->log->info("{$eventName} was fired.");
         }
